@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourisme au Bénin </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .hero {
+            position: relative;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            min-height: 100vh;
+        }
+
+        .hero-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(60%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+
+        }
+
+        .btn-primary {
+            background: #0077b6;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #023e8a;
+        }
+
+        .btn-outline {
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        .btn-outline:hover {
+            background: #fff;
+            color: #0077b6;
+        }
+        .menu-toogle{
+            display: none;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1100;
+        }
+        .hamburger{
+            display: inline-block;
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .hamburger::after
+        .hamburger::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 3px;
+            background: all 0.3s ease;
+        }
+        .hamburger::before{
+            top: -8px;
+        }
+        .hamburger::after{
+            top: 8px;
+        }
+        .menu-toogle[aria-expanded="true"] .hamburger{
+            background: transparent;
+        }
+        .menu-toogle[aria-expanded="true"] .hamburger::before{
+            transform: translate(8px)
+            rotate(45deg);
+        }
+        .menu-toogle[aria-expanded="true"] .hamburger::after{
+            transform: translateY(-8px)
+            rotate(-45deg);
+        }
+        .hero-nav{
+            display: flex;
+            gap: 1rem;
+        }
+        @media( max-width:768px) {
+            .menu-toogle{
+                display: block;
+            }
+            .hero-nav{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 75vw;
+                max-width: 300px;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0, 9);
+                padding: 4rem 1rem;
+                flex-direction: column;
+                gap: 1.5rem;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                z-index: 1050;
+            }
+            .hero-nav.open{
+                transform: translateX(0);
+            }
+            .hero-nav a{
+                color: #fff;
+            }
+            .nav-overlay{
+                display: block;
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0, 5);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s;
+                z-index: 1000;
+            }
+            .nav-overlay.visible{
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+        .incontournables {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #2c3e50;
+        }
+
+        .cards {
+            display: flex;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0, 1);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            margin: 10px;
+            font-size: 1.3rem;
+            color: #2c3e50;
+        }
+
+        .card p {
+            margin: 0 10px 15px;
+            color: #555;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <img src="photo 1.jpg" alt="fond" class="hero-img">
+        <div class="hero-content">
+            <h1> BENIN: Terre de culture et d'Aventure </h1>
+            <p> Des plages dorées au palais royaux , explorez la richesse et l'ame du Benin. Vivez une aventure unique
+                entre traditions et paysages majestueux</p>
+            <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="ouvrir le menu">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <nav id="primary-nav" class="hero-nav" aria-hidden="true">
+                <a href="index.html" class="btn btn-primary">Acceuil</a>
+                <a href="destinations.html" class="btn btn-outline">Destinations</a>
+                <a href="activités.html" class="btn btn-outline"> Activités</a>
+                <a href="info-pratiques.html" class="btn btn-outline">Info-pratiques</a>
+                <a href="contacts.html" class="btn btn-outline">Contacts</a>
+
+            </nav>
+            <div id="nav-overlay" class="nav-overlay" hidden></div>
+        </div>
+    </section>
+    <section class="incontournable">
+        <h2> Nos coups de coeur</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="téléchargement.jpeg" alt="Ganvié">
+                <h3> Ganvié </h3>
+                <p> La venise d'Afrique: un village lacustre unique au monde</p>
+            </div>
+            <div class="card">
+                <img src="téléchargement (1).jpeg" alt="Ouidah">
+                <h3> Ouidah </h3>
+                <p> Ville historique et berceau du vaudou,riche en culture</p>
+            </div>
+            <div class="card">
+                <img src="images.jpeg" alt="Pendjari ">
+                <h3> Parc Pendjari</h3>
+                <p> Réserve animalière avec éléphants,lions et paysages grandioses</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;2025 Tourisme Bénin - Tous droits réservés.</p>
+    </footer>
+</body>
+
+</html>

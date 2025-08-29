@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activités</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segeoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: #f4f6f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 115vh;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .hero img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(60%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #0077b6;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #023e8a;
+        }
+
+        .btn-outline {
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        .btn-outline:hover {
+            background: #fff;
+            color: #0077b6;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .destination {
+            margin-bottom: 50px;
+        }
+
+        .destination h2 {
+            font-size: 2em;
+            color: #2c3e50;
+            border-left: 6px solid #3498db;
+            padding-left: 12px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .activity {
+            margin-bottom: 30px;
+        }
+
+        .activity-content {
+            display: flex;
+            gap: 30px;
+            flex-direction: row;
+            align-items: flex-start;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s;
+            padding: 20px;
+            flex: 1;
+
+        }
+
+        .activity-content:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px;
+        }
+
+        .activity-content img {
+            width: 40%;
+            min-height: 200px;
+            object-fit: cover;
+            border-radius: 15px 0 0 15px;
+            transition: transform 0.3s;
+        }
+
+        .activity-content:hover img {
+            transform: scale(1.05);
+        }
+
+        .activity-content h3 {
+            margin-bottom: 12px;
+            font-size: 1.4em;
+            color: #34495e;
+        }
+
+        .activity-content p {
+            margin: 6px 0;
+            color: #555;
+            font-size: 1em;
+        }
+
+        details {
+            margin-top: 10px;
+        }
+
+        details summary {
+            cursor: pointer;
+            color: #3498db;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        details summary:hover {
+            color: #1d6fa5;
+        }
+
+        details p {
+            margin-top: 8px;
+            color: #444;
+            font-size: 0.95em;
+        }
+
+        footer {
+            color: white;
+            background: #2c3e50;
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px 10px;
+            margin-bottom: none;
+        }
+
+        @media(max-width:768px) {
+            .activity-content {
+                flex-direction: column;
+            }
+
+            .activity-content img {
+                width: 100%;
+                border-radius: 15px 15px 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <img src="images (25).jpeg" alt="fond3" class="hero-img">
+        <div class="hero-content">
+            <h1>Activités Inoubliables au Coeur du Bénin </h1>
+            <p> Des plages dorées au palais royaux , explorez la richesse et l'ame du Benin. Vivez une aventure unique
+                entre traditions et paysages majestueux</p>
+            <div class="hero-actions">
+                <a href="index.html" class="btn btn-outline">Acceuil</a>
+                <a href="destinations.html" class="btn btn-outline">Destinations</a>
+                <a href="activités.html" class="btn btn-primary">Activités</a>
+                <a href="info-pratiques.html" class="btn btn-outline">Info-pratiques</a>
+                <a href="contacts.html" class="btn btn-outline">Contacts</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section>
+            <div class="destination">
+                <h2> Cotonou </h2>
+                <details>
+                    <summary> A propos </summary>
+                    <p>Capitale économique animée du Bénin,connue pour ses marchés colorés,ses plages et sa vie
+                        culturelle dynamique</p>
+                </details>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="téléchargement (2).jpeg" alt="Plage">
+                        <h3> Plage de Fidjrossè </h3>
+                        <p> Profitez du sable dorées et des couchers de soleil magnifiques</p>
+                        <details>
+                            <summary> En savoir plus </summary>
+                            <p> Cette plage animée est un lieu incontournable de Cotonou. Un coin parfait pour se
+                                détendre,admirer le coucher du soleil et sentir la brise marine. Les habitants comme les
+                                visiteurs s'y retrouvent pour profiter des vagues,déguster des mets locaux et admirer
+                                des couhers de soleil spectaculaire.
+                            <p>
+                        </details>
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="images (1).jpeg" alt="">
+                        <h3> Marché de Dantokpa </h3>
+                        <p>Un marché immense et coloré ou l'on découvre l'ame vivante du commerce béninois</p>
+                        <details>
+                            <summary> En savoir plus </summary>
+                            <p> Dantokpa est l'un des plus grands marchés d'Afrique de l'ouest. On y trouve de tout
+                                épices,tissus,artisanats,objets rituels. Une expérience sensorielle unique ou chaque
+                                allée raconte une histoire.</p>
+                        </details>
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="images (2).jpeg" alt="">
+                        <h3> Place de l'Amazone </h3>
+                        <p> Un monument impressionnant rendant hommage aux célèbres guerrières du Dahomey: les Amazones
+                        </p>
+                        <details>
+                            <summary> En savoir plus </summary>
+                            <p>La statue de l'Amazone,haute et majestueuse,symbolise la bravoure des femmes combattantes
+                                du Dahomey. Ce monument moderne est devnu un repère et historique à Cotonou </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <div class="destination">
+                <h2> Ouidah </h2>
+                <details>
+                    <summary> A propos </summary>
+                    <p> Ville historique et spirituelle, célèbre pour son patriotisme vaudou et son role dans la traite
+                        négrière </p>
+                </details>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="téléchargement (3).jpeg" alt="porte">
+                        <h3> Porte du Non-Retour </h3>
+                        <p>Un lieu chargé d'émotions et de mémoire,symbole de la traite négrière </p>
+                        <details>
+                            <summary> En savoir plus </summary>
+                            <p> Située au bord de l'océan,la porte du Non-Retour rappelle le départ forcé de milliers
+                                d'Africains réduits en esclavage. Ce site est aujourd'hui un haut lieu de mémoire et de
+                                receuillement</p>
+                        </details>
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="téléchargement (6).jpeg" alt="Temple">
+                        <h3>Temple des Pythons</h3>
+                        <p> Un espace sacrée ou traditions et croyances ancestrales continuent de vivre </p>
+                        <details>
+                            <summary>En savoir plus </summary>
+                            <p> Ce temple vodoun abrite des pythons sacrés,considérés comme protecteurs. Il témoigne de
+                                la place centrale de la religion traditionnelle dans la culture beninoise </p>
+                        </details>
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="images (5).jpeg" alt="Route">
+                        <h3>Route des Esclaves</h3>
+                        <p> une marhe symbolique retraçant les pas de ceux qui furent déportés </p>
+                        <details>
+                            <summary>En savoir plus</summary>
+                            <p> La Route des Esclaves est un parcours historique de 4Km jalonné de monuments et de
+                                symboles qui retrace le trajet des captifs de Ouidah jusqu'à la mer </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <div class="destination">
+                <h2>Abomey</h2>
+                <details>
+                    <summary> A propos </summary>
+                    <p>Ancienne capitale du royaumedu Danhomey, riche en histoire et patrimoine royal</p>
+                </details>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="images (6).jpeg" alt="Palais">
+                        <h3>Palais Royal</h3>
+                        <p>Entrez dans l'histoire fascinante des rois du Dahomeyen visitant ce patrimoine culturel
+                            classé à l'UNESCO </p>
+                        <details>
+                            <summary>En savoir plus</summary>
+                            <p> Ancienne résidence des rois du Dahomey,le Plais Royal d'abomeyest riche en histoire,en
+                                architecture traditionnelle et en symbole culturels</p>
+                        </details>
+                    </div>
+                </div>
+                <div class=" activity">
+                    <div class="activity-content">
+                        <img src="images (8).jpeg" alt="Musée">
+                        <h3> Musée Historique </h3>
+                        <p> Des trésors cachés, récits et des symboles qui racontent la grandeur passé du royaume </p>
+                        <details>
+                            <summary> En savoir plus </summary>
+                            <p>Le musée historique d'Abomey regorge d'objets anciens,de trones d'armes,et de fresques
+                                retraçant l'histoire du royaume. C'est une véritable plongée dans la mémoire béninoise
+                            </p>
+                        </details>
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="téléchargement (7).jpeg" alt="Artisanat">
+                        <h3> Artisanat local </h3>
+                        <p> Explorez les ateliers et repartez avec des pièces uniques faites à la main
+                        </p>
+                        <details>
+                            <summary> En savoir plus </summary>
+                            <p>Abomey est réputé pour son artisanat:tissus tissés, sculptures en bois
+                                bijoux et poteries. Chaque objet est une oeuvvre d'art qui transmet un
+                                héritage culturel </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <div class="destination">
+                <h2> Ganvié </h2>
+                <details>
+                    <summary>A propos </summary>
+                    <p>La "Venise d'Afrique", célèbre pour ses maisons sur pilotis et son marché flottant</p>
+                </details>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="images (9).jpeg" alt="Balade">
+                        <h3> Balade en pirogue </h3>
+                        <p> Explorez les canaux et le mode de vie unique des habitants</p>
+                        <details>
+                            <summary> En savoir plus </summary>
+                            <p> Ganvié est surnommée la Venise de l'Afrique. Une balade en pirogue vous plonge
+                                dans un univers paisible ou les habitants vivent au rythme de l'eau </p>
+                        </details>
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="téléchargement (8).jpeg" alt="maisons">
+                        <h3> Maisons sur pilotis </h3>
+                        <p> Un paysage etonnant ou l'eau et la vie quotidienne ne font qu'un</p>
+                        <details>
+                            <summary> En savoir plus </summary>
+                            <p> Les maisons sur pilotis de Ganvié offrent un spectacle unique. Construites au
+                                dessus du lac, elles témoignent de l'ingéniosité et de l'adaptation des
+                                populations </p>
+                        </details>
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="images (10).jpeg" alt="Marché">
+                        <h3> Marché flottant </h3>
+                        <p> Un commerce original au fil de l'eau</p>
+                        <details>
+                            <summary> En savoir plus </summary>
+                            <p> Les habitants vendent fruits,poissons et artisanat depuis leurs pirogues créant un
+                                marché pittoresque et animé.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <div class="destination">
+                <h2>Parc de la Pendjari</h2>
+                <details>
+                    <summary> A propos </summary>
+                    <p> Parc nationale du Bénin,célèbre pour ses safaris et sa biodiversité impressionnate </p>
+                </details>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="images (11).jpeg" alt="Safari">
+                        <h3> Safari 4*4 </h3>
+                        <p>Explorez la faune lors d'un safari inoubliable</p>
+                        <details>
+                            <summary>En savoir plus</summary>
+                            <p>Rencontrez les lions,éléphants,antilopes et autres animaux dans leur habitat naturel</p>
+                        </details>
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="téléchargement (9).jpeg" alt="oiseaux">
+                        <h3> Observation des oiseaux </h3>
+                        <p>Admirez la diversité,d'oiseaux du parc</p>
+                        <details>
+                            <summary> En savoir plus </summary>
+                            <p> Ideale pour les passionnés d'ornithologie avec de nombreuses espèces rares à observés
+                            </p>
+                        </details>
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-content">
+                        <img src="images (12).jpeg" alt="Randonnée">
+                        <h3> Randonnée </h3>
+                        <p>Parcourez les sentiers naturels et découvrez les paysages du parc</p>
+                        <details>
+                            <summary> En savoir plus </summary>
+                            <p>Profitez de panoramas spectaculaires et d'une immersion totale dans la nature préservée
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p> &copy; 2025 Tourisme Bénin - Tous droits réservés</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+            line-height: 1.6;
+            background: #ecf0f1;
+            color: #333;
+            padding: 20px;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 65vh;
+            place-items: center;
+            overflow: hidden;
+            display: grid;
+            color: #fff;
+        }
+
+        .hero-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(60%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            font-weight: bold;
+            padding: 0.7rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #0077b6;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #023e8a;
+        }
+
+        .btn-outline {
+            border: 2px solid #fff;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: #fff;
+            color: #0077b6;
+        }
+
+        form {
+            background: #fff;
+            padding: 30px;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 50%;
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+
+        form h2 {
+            font-size: 30px;
+            color: #747cdf;
+        }
+
+        .separation {
+            width: 100%;
+            ;
+            height: 2px;
+            background-color: #747cdf;
+        }
+
+        .corps-formulaire {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .groupe {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .groupe input {
+            margin-top: 5px;
+            padding: 10px 5px 10px 30px;
+            border: 1px solid #c9c9c9;
+            outline-color: #747cdf;
+            border-radius: 8px;
+        }
+
+        .groupe i {
+            position: absolute;
+            left: 0;
+            top: 30px;
+            padding: 9px 8px;
+            color: #747cdf;
+        }
+
+        .droite {
+            margin-left: 100px;
+        }
+
+        .droite.groupe {
+            height: 100%;
+        }
+
+        .groupe textarea {
+            margin-top: 5px;
+            padding: 10px 5px 10px 30px;
+            outline: none;
+            background-color: #f8f8f8;
+            border: 2px solid #747cdf;
+            border-radius: 8px;
+            resize: none;
+            height: 230px;
+        }
+
+        .pied-formulaire button {
+            margin-top: 20px;
+            margin-left: 250px;
+            background-color: #747cdf;
+            color: white;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 8px;
+            outline: none;
+            transition: transform 0.5s;
+        }
+        .pied-formulaire button:hover{
+            transform: scale(1.05);
+        }
+        .contact-info{
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .contact-info h2{
+            color: #747cdf;
+            font-weight:bold;
+        }
+        .contact-info p{
+            margin: 8px 0;
+        }
+        footer{
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <img src="contact 1.jpg" alt="fond5" class="hero-img">
+        <div class="hero-content">
+            <h1>Contactez-nous</h1>
+            <p> Une question ? Une suggestion ? Nous sommes à votre écoute </p>
+            <div class="hero-actions">
+                <a href="index.html" class="btn btn-outline">Acceuil</a>
+                <a href="destinations.html" class="btn btn-outline">Destinations</a>
+                <a href="activités.html" class="btn btn-outline">Activités</a>
+                <a href="info-pratiques.html" class="btn btn-outline">Info-pratiques</a>
+                <a href="contacts.html" class="btn btn-primary">Contacts</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <form action="">
+            <h2>Contactez-nous</h2>
+            <div class="separation"></div>
+            <div class="corps-formulaire">
+                <div class="gauche">
+                    <div class="groupe">
+                        <label> Votre nom et prénom </label>
+                        <input type="text">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="groupe">
+                        <label>Votre adresse email </label>
+                        <input type="text">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="groupe">
+                        <label>Votre numéro de téléphone </label>
+                        <input type="text">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                </div>
+                <div class="droite">
+                    <div class="groupe">
+                        <label> Message</label>
+                        <textarea> </textarea>
+                        <i class="fa-solid fa-message"></i>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="pied-formulaire">
+            <button>Envoyer le message</button>
+        </div>
+        <div class="contact-info">
+            <h2>Nos coordonées</h2>
+            <p>Email: tourismebenin@bj.com</p>
+            <p>Télephone: +229 59 94 68 11</p>
+            <p>Adresse: Cotonou Bénin</p>
+        </div>
+    </section>
+    <footer>
+        <p> &copy;2025 Tourisme Bénin - Tous droits réservés </p>
+    </footer>
+</body>
+
+</html>

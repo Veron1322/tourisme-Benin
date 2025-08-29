@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infos pratiques</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "Segeoe UI",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: #f4f3f4; ;
+            color: #333;
+            padding: 20px;
+        }
+        .hero{
+            position: relative;
+            place-items: center;
+            display: grid;
+            overflow: hidden;
+            min-height: 65vh;
+            color: #fff;
+        }
+        .hero img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(60%);
+        }
+        .hero content{
+            position: relative;
+            z-index: 1;
+            padding: 1rem;
+        }
+        .hero h1{
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            justify-content: center;
+        }
+        .hero p{
+            font-size: 1.2rem;
+            margin-bottom:  1.5rem;
+            text-align: center;
+            justify-content: center;
+        }
+        .btn{
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        .btn-primary{
+            background: #0077b6;
+            color: #fff;
+        }
+        .btn-primary:hover{
+            background: #023e8a;
+        }
+        .btn-outline{
+            border:2px solid #fff;
+            color: #fff;
+        }
+        .btn-outline:hover{
+            background: #fff;
+            color: #0077b6;
+        }
+        main{
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .container{
+            margin: 2rem auto;
+            max-width: 900px;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .info_box{
+            background: white;
+            padding:1.5rem ;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0, 1);
+            text-align: center;
+
+        }
+        .info_box h2{
+            margin-bottom: 20px;
+            padding-left: 12px;
+            font-size: 2em;
+            font-weight: 700;
+            color: #1565c0;
+        }
+        .info_box i{
+            margin-right: 8px;
+            color: #4fc3f7;
+            font-size: 50px;
+            margin-bottom: 15px;
+            transition: transform 0.3s color 0.3s;
+            cursor: pointer;
+        }
+        .info_box i:hover{
+            color: #1565c0;
+            transform: scale(1.2);
+        }
+        .bounce{
+            animation: bounce 0.5s;
+        }
+        @keyframes bounce {
+            0% ,100% {
+                transform:translateY(0);
+            }
+            50%{
+                transform: translateY(-15px)
+            }
+        }
+        footer{
+            background:#2c3e50;
+            padding: 40px 20px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 40px;
+        }
+        footer h3{
+            color: #4fc3f7;
+            margin-bottom: 15px;
+        }
+        footer a{
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover{
+            color: #4fc3f7;
+        }
+        footer i{
+            font-size: 50px;
+            margin: 0 10px;
+            color: #ffffff;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        footer.i:hover{
+            color: #4fc3f7;
+            transform: scale(1.2) ;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <img src="images (27).jpeg" alt="fond4" class="hero-img">
+        <div class="hero-content">
+            <h1>Info-pratiques</h1>
+            <p><i class="fa-solid fa-plane"></i>   Préparez votre voyage en toute sérénité</p>
+            <div class="hero-actions">
+                <a href="index.html" class="btn btn-outline"> Acceuil</a>
+                <a href="destinations.html" class="btn btn-outline">Destinations</a>
+                <a href="activités.html" class=" btn btn-outline">Activités</a>
+                <a href="info-pratiques.html" class="btn btn-primary">Info-pratiques</a>
+                <a href="contacts.html" class="btn btn-outline">Contacts</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="container">
+            <div class="info_box">
+                <h2><i class="fa-solid fa-plane-departure"></i>Comment venir au Bénin</h2>
+                <p> Le principal point d'entrée au Bénin est l'Aéroport International Cardinal Bernadin Gantin de
+                    Cotonou. Il acceille la majorité des vols internationnaux, avec des liasons régulières depuis
+                    l'Europe,l'Afrique de l'Ouest et parfois le Moyen-Orient. Pour entrer au Bénin il est obligatoire
+                    d'avoir un visa. Celui peut etre géneralement obtenue en ligne grace a la plateforme officielle
+                    d'e-visa. Pensez aussi à vérifier la validité de votre passport:il doit etre valide au moins 6 mois
+                    après la date d'arrivée</p>
+            </div>
+            <div class="info_box">
+                <h2><i class="fa-solid fa-car"></i>Se déplacer </h2>
+                <p> Le moyen de transport le plus courant est le taxi-moto, appelé localement zémidjan. C'est rapide et
+                    économique, mais il faut toujours négocier le prix avant de monter. Les taxis collectifs et minibus
+                    relient les grandes villes du pays à des prix abordables. Pour plus de confort, certaines compagnies
+                    privés proposent des bus climatisés. Il est également proposent de louer une voiture avec chauffeur,
+                    pratique por visiter plusieurs régions </p>
+            </div>
+            <div class="info_box">
+                <h2><i class="fa-solid fa-coins"></i>Monnaie et paiement</h2>
+                <p> La monnaie officielle est le franc CFA (XOF).Les distributeurs automatiques sont présents dans les
+                    grandes villes comme Cotonou,Poto-Novo,Parakou et beaucoup d'autres. Les paiements se font
+                    principalement en espèces, memes si certaines grandes stuctures touristiquesou hotels acceptent les
+                    cartes bancaires. Prévois toujours du liquide poor les petites dépenses</p>
+            </div>
+            <div class="info_box">
+                <h2><i class="fa-solid fa-language"></i> Langue et Communication</h2>
+                <p> La langue officielle au Bénin est le Français. Cependant de nombreuses langues locales sont
+                    parlées:fon,yoruba,goun etc. Pour rester connecté, acheter facilement une carte SIM locale (MTN ou
+                    MOOV) à petit prix, ce qui permet d'avoir Internet et des appels locaux. Le wifi est présent dans
+                    certains hotels, café et restaurants</p>
+            </div>
+            <div class="info_box">
+                <h2><i class="fa-solid fa-notes-medical"></i>Santé et Sécurité</h2>
+                <p> La vaccination contre la fièvre jaune est obligatoire pour entere au Bénin. D'auters vaccins cintr
+                    la typhoide,l'hépatite A ou la méningite sont recommandés. Il est conseillé d'utiliser des repulsifs
+                    contre les moustiques et si possibles de dormir sous moustiquaires. Entermes de sécurité, le Bénin
+                    est un pays globalement acceuillant mais comme partout in faut rester vigilants:éviter de se
+                    déplacer seul la nuit et surveiller ses affaires dans les lieux publics. Numéros utiles: Police
+                    (116),Pompiers (118),Urgences médicles (117).</p>
+            </div>
+            <div class="info_box">
+                <h2><i class="fa-solid fa-sun"></i>Climat et saison idéale </h2>
+                <p> Le climat est topical,avec deux saisons de pluies (avril à juillet et sptembre à novembre). La
+                    période la plus agréable pour voyager est de novembre à mars, pendant la grande saison sèche quand
+                    il fait moins humide.Les températures varient généralement entre 25 C et 32 C,avec une chaleur plus
+                    intense au nord</p>
+            </div>
+            <div class="info_box">
+                <h2><i class="fa-solid fa-phone"></i>Contacts Utiles</h2>
+                <p>.Office de Tourisme Bénin: Disponible à Cotonou pour informer les visiteurs;
+                    .Ambassade du Bénin (selon le pays d'origine) pour la préparation du voyage;
+                    .Urgences médicales:117 &nbsp;| &nbsp;
+                    .Pompiers:118 &nbsp;| &nbsp;
+                    . Police:166 &nbsp;|&nbsp;
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_section">
+            <h3>A propos</h3>
+            <p> Découvrez les richesses culturelles et naturelles du Bénin</p>
+        </div>
+        <div class="footer_section">
+            <h3> Suivez-nous</h3>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p> &copy; 2025 Tourisme Bénin - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
